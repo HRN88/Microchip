@@ -1,0 +1,578 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$D:\ExternoKoppernikus\Temp\s7lo.obj
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 2 2 4 1
+reset_vec CODE 0 0 0 2 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/debug\demoADC.X.debug.obj
+cinit CODE 0 D34 D34 A 1
+text0 CODE 0 B52 B52 9C 1
+text1 CODE 0 97E 97E 108 1
+text2 CODE 0 A86 A86 CC 1
+text3 CODE 0 C40 C40 4A 1
+text4 CODE 0 860 860 11E 1
+text5 CODE 0 D1C D1C C 1
+text6 CODE 0 C8A C8A 42 1
+text7 CODE 0 BEE BEE 52 1
+text8 CODE 0 CCC CCC 3E 1
+text9 CODE 0 D28 D28 C 1
+text10 CODE 0 D0A D0A 12 1
+cstackCOMRAM COMRAM 1 1 1 1E 1
+smallconst SMALLCONST 0 800 800 60 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-3F3 1
+RAM 400-7FF 1
+SFR F60-FD3 1
+SFR FD5-FDA 1
+SFR FE0-FE2 1
+SFR FE8-FEA 1
+SFR FF0-FFC 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3F3 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 6-7FF 1
+CONST D3E-7DBF 1
+STACK 400-7FF 1
+SMALLCONST D3E-7DBF 1
+CODE 6-7FF 1
+CODE D3E-7DBF 1
+BIGRAM 1F-3F3 1
+BIGRAM 400-7FF 1
+COMRAM 1F-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST D3E-7DBF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\demoADC.X.debug.obj
+D0A text10 CODE >79:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D0A text10 CODE >80:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D0C text10 CODE >81:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D0E text10 CODE >82:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D12 text10 CODE >84:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D16 text10 CODE >85:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D1A text10 CODE >87:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D28 text9 CODE >51:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D2A text9 CODE >53:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D2E text9 CODE >54:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CCC text8 CODE >67:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CCC text8 CODE >70:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CD4 text8 CODE >71:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CD6 text8 CODE >72:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CE6 text8 CODE >73:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CEA text8 CODE >71:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+CFC text8 CODE >75:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D02 text8 CODE >76:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D08 text8 CODE >77:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+BEE text7 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+BEE text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+BF6 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+BFE text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C02 text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C04 text7 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C0A text7 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C0C text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C10 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C16 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C22 text7 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C2A text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C2C text7 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C32 text7 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C36 text7 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C36 text7 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C3E text7 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwdiv.c
+C8A text6 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+C8A text6 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+C92 text6 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+C96 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+C98 text6 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+C9E text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CA0 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CA4 text6 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CB0 text6 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CB8 text6 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CBE text6 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CC2 text6 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CC2 text6 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+CCA text6 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\lwmod.c
+D1C text5 CODE >104:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D1E text5 CODE >105:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+D22 text5 CODE >106:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+860 text4 CODE >464:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+860 text4 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+868 text4 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+86A text4 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+872 text4 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+878 text4 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+87A text4 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+87E text4 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8A4 text4 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8BC text4 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8C0 text4 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8C4 text4 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8CC text4 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8D8 text4 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8F8 text4 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+8FC text4 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+908 text4 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+90E text4 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+912 text4 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+914 text4 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+956 text4 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+95C text4 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+964 text4 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\doprnt.c
+C40 text3 CODE >88:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C40 text3 CODE >89:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C42 text3 CODE >90:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C42 text3 CODE >91:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C46 text3 CODE >92:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C48 text3 CODE >94:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C4E text3 CODE >96:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C50 text3 CODE >89:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C6E text3 CODE >96:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C6E text3 CODE >98:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C70 text3 CODE >99:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C72 text3 CODE >100:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+C76 text3 CODE >102:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+A86 text2 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+A86 text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+A8A text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+A8E text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+A9E text2 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AA2 text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AA6 text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AB6 text2 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+ABA text2 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+ACA text2 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AD6 text2 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+ADA text2 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+ADC text2 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AE6 text2 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AE8 text2 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AEC text2 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+AF6 text2 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B0A text2 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B1A text2 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B1C text2 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B26 text2 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B2A text2 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B30 text2 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+B40 text2 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\aldiv.c
+97E text1 CODE >8:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+97E text1 CODE >10:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+986 text1 CODE >11:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+988 text1 CODE >12:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+98A text1 CODE >13:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+98A text1 CODE >14:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+98C text1 CODE >15:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+98C text1 CODE >18:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+98E text1 CODE >19:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+990 text1 CODE >20:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+992 text1 CODE >22:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+994 text1 CODE >23:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+996 text1 CODE >27:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+998 text1 CODE >28:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+99A text1 CODE >29:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+99C text1 CODE >30:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+99E text1 CODE >33:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+9A6 text1 CODE >35:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+9A8 text1 CODE >36:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A0E text1 CODE >37:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A12 text1 CODE >38:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A16 text1 CODE >39:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A18 text1 CODE >40:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A18 text1 CODE >42:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A1A text1 CODE >43:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+A80 text1 CODE >44:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\Serial.h
+B52 text0 CODE >105:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+B52 text0 CODE >106:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+B7E text0 CODE >108:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+B8A text0 CODE >110:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+B8E text0 CODE >112:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+B9A text0 CODE >113:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+BAC text0 CODE >122:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+BCC text0 CODE >124:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+BEC text0 CODE >118:D:\ExternoKoppernikus\Documentos\GitHub\Microchip\PIC18f4550\demoADC.X\main.c
+D34 cinit CODE >622:D:\ExternoKoppernikus\Temp\s7lo.
+D34 cinit CODE >624:D:\ExternoKoppernikus\Temp\s7lo.
+D34 cinit CODE >627:D:\ExternoKoppernikus\Temp\s7lo.
+D34 cinit CODE >633:D:\ExternoKoppernikus\Temp\s7lo.
+D34 cinit CODE >636:D:\ExternoKoppernikus\Temp\s7lo.
+D36 cinit CODE >637:D:\ExternoKoppernikus\Temp\s7lo.
+D38 cinit CODE >638:D:\ExternoKoppernikus\Temp\s7lo.
+D3A cinit CODE >639:D:\ExternoKoppernikus\Temp\s7lo.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwmod@counter C 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\demoADC.X.debug.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hspace_1 1F 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hspace_2 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of_printSerialnl 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of_sendDataSerial 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__end_of_readADC C8A 0 CODE 0 text3 dist/default/debug\demoADC.X.debug.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\demoADC.X.debug.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst D:\ExternoKoppernikus\Temp\s7lo.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\demoADC.X.debug.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/debug\demoADC.X.debug.obj
+___sp 0 0 STACK 2 stack D:\ExternoKoppernikus\Temp\s7lo.obj
+_main B52 0 CODE 0 text0 dist/default/debug\demoADC.X.debug.obj
+start 2 0 CODE 0 init D:\ExternoKoppernikus\Temp\s7lo.obj
+__size_of___aldiv 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__end_of_printSerialnl D0A 0 CODE 0 text8 dist/default/debug\demoADC.X.debug.obj
+__Hpowerup 2 0 CODE 0 powerup dist/default/debug\demoADC.X.debug.obj
+readADC@channel 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+printf@c 18 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+printf@f D 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+startSerial@brg_16 17 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__accesstop 60 0 ABS 0 - D:\ExternoKoppernikus\Temp\s7lo.obj
+intlevel0 0 0 CODE 0 text D:\ExternoKoppernikus\Temp\s7lo.obj
+intlevel1 0 0 CODE 0 text D:\ExternoKoppernikus\Temp\s7lo.obj
+intlevel2 0 0 CODE 0 text D:\ExternoKoppernikus\Temp\s7lo.obj
+intlevel3 0 0 CODE 0 text D:\ExternoKoppernikus\Temp\s7lo.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___aldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\demoADC.X.debug.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\demoADC.X.debug.obj
+___aldiv@sign A 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\demoADC.X.debug.obj
+__end_of_configADC D1C 0 CODE 0 text10 dist/default/debug\demoADC.X.debug.obj
+_startSerial$1087 19 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__size_of_configADC 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+printf@flag 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+printf@prec 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+_ADCON0 FC2 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_ADCON2 FC0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_ADRESH FC4 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_ADRESL FC3 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___inthi_sp 0 0 STACK 2 stack D:\ExternoKoppernikus\Temp\s7lo.obj
+___intlo_sp 0 0 STACK 2 stack D:\ExternoKoppernikus\Temp\s7lo.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\demoADC.X.debug.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\demoADC.X.debug.obj
+_configADC D0A 0 CODE 0 text10 dist/default/debug\demoADC.X.debug.obj
+_BAUDCONbits FB8 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\demoADC.X.debug.obj
+?_printf D 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hintcodelo 2 0 CODE 0 intcodelo dist/default/debug\demoADC.X.debug.obj
+___lwmod@divisor A 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__end_of___aldiv B52 0 CODE 0 text2 dist/default/debug\demoADC.X.debug.obj
+__end_of___lwdiv C40 0 CODE 0 text7 dist/default/debug\demoADC.X.debug.obj
+__end_of___lwmod CCC 0 CODE 0 text6 dist/default/debug\demoADC.X.debug.obj
+_startSerial 97E 0 CODE 0 text1 dist/default/debug\demoADC.X.debug.obj
+_dpowers 801 0 SMALLCONST 0 smallconst dist/default/debug\demoADC.X.debug.obj
+___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__size_of_putch 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___lwmod@dividend 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lintcodelo 2 0 CODE 0 intcodelo dist/default/debug\demoADC.X.debug.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+start_initialization D34 0 CODE 0 cinit dist/default/debug\demoADC.X.debug.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\demoADC.X.debug.obj
+_TRISCbits F94 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___aldiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+___rparam_used 1 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_SPBRGH FB0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__end_of_printf 97E 0 CODE 0 text4 dist/default/debug\demoADC.X.debug.obj
+_readADC C40 0 CODE 0 text3 dist/default/debug\demoADC.X.debug.obj
+printSerialnl@p 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug\demoADC.X.debug.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug\demoADC.X.debug.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug\demoADC.X.debug.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug\demoADC.X.debug.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug\demoADC.X.debug.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\demoADC.X.debug.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\demoADC.X.debug.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\demoADC.X.debug.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\demoADC.X.debug.obj
+__Hconst 0 0 CONST 0 const dist/default/debug\demoADC.X.debug.obj
+__Hidata 0 0 CODE 0 idata dist/default/debug\demoADC.X.debug.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/debug\demoADC.X.debug.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\demoADC.X.debug.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\demoADC.X.debug.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\demoADC.X.debug.obj
+__Hstack 0 0 STACK 2 stack dist/default/debug\demoADC.X.debug.obj
+__Htext0 0 0 ABS 0 text0 dist/default/debug\demoADC.X.debug.obj
+__Htext1 0 0 ABS 0 text1 dist/default/debug\demoADC.X.debug.obj
+__Htext2 0 0 ABS 0 text2 dist/default/debug\demoADC.X.debug.obj
+__Htext3 0 0 ABS 0 text3 dist/default/debug\demoADC.X.debug.obj
+__Htext4 0 0 ABS 0 text4 dist/default/debug\demoADC.X.debug.obj
+__Htext5 0 0 ABS 0 text5 dist/default/debug\demoADC.X.debug.obj
+__Htext6 0 0 ABS 0 text6 dist/default/debug\demoADC.X.debug.obj
+__Htext7 0 0 ABS 0 text7 dist/default/debug\demoADC.X.debug.obj
+__Htext8 0 0 ABS 0 text8 dist/default/debug\demoADC.X.debug.obj
+__Htext9 0 0 ABS 0 text9 dist/default/debug\demoADC.X.debug.obj
+___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+startSerial@n 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\demoADC.X.debug.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\demoADC.X.debug.obj
+__smallconst 800 0 SMALLCONST 0 smallconst D:\ExternoKoppernikus\Temp\s7lo.obj
+__Hcomram 0 0 ABS 0 comram dist/default/debug\demoADC.X.debug.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/debug\demoADC.X.debug.obj
+startSerial@baudrate F 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug\demoADC.X.debug.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug\demoADC.X.debug.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug\demoADC.X.debug.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug\demoADC.X.debug.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug\demoADC.X.debug.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\demoADC.X.debug.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\demoADC.X.debug.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\demoADC.X.debug.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\demoADC.X.debug.obj
+__Lconst 0 0 CONST 0 const dist/default/debug\demoADC.X.debug.obj
+__Lidata 0 0 CODE 0 idata dist/default/debug\demoADC.X.debug.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/debug\demoADC.X.debug.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\demoADC.X.debug.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\demoADC.X.debug.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\demoADC.X.debug.obj
+__Lstack 0 0 STACK 2 stack dist/default/debug\demoADC.X.debug.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\demoADC.X.debug.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\demoADC.X.debug.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\demoADC.X.debug.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\demoADC.X.debug.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\demoADC.X.debug.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\demoADC.X.debug.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\demoADC.X.debug.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\demoADC.X.debug.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\demoADC.X.debug.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\demoADC.X.debug.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\demoADC.X.debug.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\demoADC.X.debug.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_sendDataSerial D28 0 CODE 0 text9 dist/default/debug\demoADC.X.debug.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\demoADC.X.debug.obj
+__Hdata 0 0 ABS 0 data dist/default/debug\demoADC.X.debug.obj
+__Hinit 6 0 CODE 0 init dist/default/debug\demoADC.X.debug.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\demoADC.X.debug.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\demoADC.X.debug.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\demoADC.X.debug.obj
+__Htext 0 0 ABS 0 text dist/default/debug\demoADC.X.debug.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\demoADC.X.debug.obj
+__Ldata 0 0 ABS 0 data dist/default/debug\demoADC.X.debug.obj
+__Linit 2 0 CODE 0 init dist/default/debug\demoADC.X.debug.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\demoADC.X.debug.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\demoADC.X.debug.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\demoADC.X.debug.obj
+__Ltext 0 0 ABS 0 text dist/default/debug\demoADC.X.debug.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hintret 0 0 ABS 0 intret dist/default/debug\demoADC.X.debug.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\demoADC.X.debug.obj
+__S0 30000E 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__S1 1F 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__S2 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+?_readADC 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\demoADC.X.debug.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\demoADC.X.debug.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/debug\demoADC.X.debug.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/debug\demoADC.X.debug.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\demoADC.X.debug.obj
+__activetblptr 2 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\demoADC.X.debug.obj
+__Htext10 0 0 ABS 0 text10 dist/default/debug\demoADC.X.debug.obj
+__end_of_sendDataSerial D34 0 CODE 0 text9 dist/default/debug\demoADC.X.debug.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_PIE1bits F9D 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__ptext10 D0A 0 CODE 0 text10 dist/default/debug\demoADC.X.debug.obj
+___aldiv A86 0 CODE 0 text2 dist/default/debug\demoADC.X.debug.obj
+___lwdiv BEE 0 CODE 0 text7 dist/default/debug\demoADC.X.debug.obj
+___lwmod C8A 0 CODE 0 text6 dist/default/debug\demoADC.X.debug.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\demoADC.X.debug.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\demoADC.X.debug.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lcomram 0 0 ABS 0 comram dist/default/debug\demoADC.X.debug.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/debug\demoADC.X.debug.obj
+_printf 860 0 CODE 0 text4 dist/default/debug\demoADC.X.debug.obj
+sendDataSerial@c 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\demoADC.X.debug.obj
+___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__end_of_startSerial A86 0 CODE 0 text1 dist/default/debug\demoADC.X.debug.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\demoADC.X.debug.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+stackhi 7FF 0 ABS 0 - D:\ExternoKoppernikus\Temp\s7lo.obj
+stacklo 400 0 ABS 0 - D:\ExternoKoppernikus\Temp\s7lo.obj
+__Lintcode 2 0 CODE 0 intcode dist/default/debug\demoADC.X.debug.obj
+__Lintret 0 0 ABS 0 intret dist/default/debug\demoADC.X.debug.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\demoADC.X.debug.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lspace_0 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lspace_1 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lspace_2 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+printf@ap 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+end_of_initialization D34 0 CODE 0 cinit dist/default/debug\demoADC.X.debug.obj
+printSerialnl@String 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\demoADC.X.debug.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/debug\demoADC.X.debug.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of_printf 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_CPUDIV$OSC3_PLL4 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+?___aldiv 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+?___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+?___lwmod 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hreset_vec 2 0 CODE 0 reset_vec dist/default/debug\demoADC.X.debug.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/debug\demoADC.X.debug.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\demoADC.X.debug.obj
+__pcinit D34 0 CODE 0 cinit dist/default/debug\demoADC.X.debug.obj
+__ptext0 B52 0 CODE 0 text0 dist/default/debug\demoADC.X.debug.obj
+__ptext1 97E 0 CODE 0 text1 dist/default/debug\demoADC.X.debug.obj
+__ptext2 A86 0 CODE 0 text2 dist/default/debug\demoADC.X.debug.obj
+__ptext3 C40 0 CODE 0 text3 dist/default/debug\demoADC.X.debug.obj
+__ptext4 860 0 CODE 0 text4 dist/default/debug\demoADC.X.debug.obj
+__ptext5 D1C 0 CODE 0 text5 dist/default/debug\demoADC.X.debug.obj
+__ptext6 C8A 0 CODE 0 text6 dist/default/debug\demoADC.X.debug.obj
+__ptext7 BEE 0 CODE 0 text7 dist/default/debug\demoADC.X.debug.obj
+__ptext8 CCC 0 CODE 0 text8 dist/default/debug\demoADC.X.debug.obj
+__ptext9 D28 0 CODE 0 text9 dist/default/debug\demoADC.X.debug.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\demoADC.X.debug.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\demoADC.X.debug.obj
+__ramtop 800 0 RAM 0 ramtop D:\ExternoKoppernikus\Temp\s7lo.obj
+___aldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+putch@c 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Lpowerup 2 0 CODE 0 powerup dist/default/debug\demoADC.X.debug.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\demoADC.X.debug.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/debug\demoADC.X.debug.obj
+_printSerialnl CCC 0 CODE 0 text8 dist/default/debug\demoADC.X.debug.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\demoADC.X.debug.obj
+__size_of_readADC 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___param_bank 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\demoADC.X.debug.obj
+__end_of__initialization D34 0 CODE 0 cinit dist/default/debug\demoADC.X.debug.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\demoADC.X.debug.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\demoADC.X.debug.obj
+__CFG_FOSC$HSPLL_HS 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+___aldiv@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__end_of_main BEE 0 CODE 0 text0 dist/default/debug\demoADC.X.debug.obj
+printf@val 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__end_of_dpowers 80B 0 SMALLCONST 0 smallconst dist/default/debug\demoADC.X.debug.obj
+_RCREG FAE 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_SPBRG FAF 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_TRISA F92 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_TXREG FAD 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__end_of_putch D28 0 CODE 0 text5 dist/default/debug\demoADC.X.debug.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__HRAM 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Hbss 0 0 RAM 1 bss dist/default/debug\demoADC.X.debug.obj
+__Hram 0 0 ABS 0 ram dist/default/debug\demoADC.X.debug.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\demoADC.X.debug.obj
+__LRAM 1 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__Lbss 0 0 RAM 1 bss dist/default/debug\demoADC.X.debug.obj
+__Lram 0 0 ABS 0 ram dist/default/debug\demoADC.X.debug.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\demoADC.X.debug.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+_putch D1C 0 CODE 0 text5 dist/default/debug\demoADC.X.debug.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__size_of_startSerial 0 0 ABS 0 - dist/default/debug\demoADC.X.debug.obj
+__initialization D34 0 CODE 0 cinit dist/default/debug\demoADC.X.debug.obj
+startSerial@FOSC 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+startSerial@mode 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\demoADC.X.debug.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\demoADC.X.debug.obj
+__Hsmallconst 860 0 SMALLCONST 0 smallconst dist/default/debug\demoADC.X.debug.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\demoADC.X.debug.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\demoADC.X.debug.obj
+__Hintcode 2 0 CODE 0 intcode dist/default/debug\demoADC.X.debug.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text4 0 860 860 4DE 1
+cstackCOMRAM 1 1 1 1E 1
+reset_vec 0 0 0 6 1
+smallconst 0 800 800 60 1
+config 0 300000 300000 E 1

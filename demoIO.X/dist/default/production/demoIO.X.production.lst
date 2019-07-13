@@ -1,0 +1,1065 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.42 build -159332390 
+                                                                                               Sat Jun 30 09:39:05 2018
+
+Microchip Technology Omniscient Code Generator v1.42 (Free mode) build 201704130522
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     7                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    12                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    13                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    14  0000                     
+    15                           ; Version 1.42
+    16                           ; Generated 13/04/2017 GMT
+    17                           ; 
+    18                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    19                           ; All rights reserved.
+    20                           ; 
+    21                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    22                           ; 
+    23                           ; Redistribution and use in source and binary forms, with or without modification, are
+    24                           ; permitted provided that the following conditions are met:
+    25                           ; 
+    26                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    27                           ;        conditions and the following disclaimer.
+    28                           ; 
+    29                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    30                           ;        of conditions and the following disclaimer in the documentation and/or other
+    31                           ;        materials provided with the distribution.
+    32                           ; 
+    33                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    34                           ;        software without specific prior written permission.
+    35                           ; 
+    36                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    37                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    38                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    39                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    40                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    41                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    42                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    43                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    44                           ; 
+    45                           ; 
+    46                           ; Code-generator required, PIC18F4550 Definitions
+    47                           ; 
+    48                           ; SFR Addresses
+    49  0000                     _LATE	set	3981
+    50  0000                     _LATD	set	3980
+    51  0000                     _LATC	set	3979
+    52  0000                     _LATB	set	3978
+    53  0000                     _LATA	set	3977
+    54  0000                     _TRISE	set	3990
+    55  0000                     _TRISD	set	3989
+    56  0000                     _TRISC	set	3988
+    57  0000                     _TRISB	set	3987
+    58  0000                     _TRISA	set	3986
+    59  0000                     _RCREG	set	4014
+    60  0000                     _PIR1bits	set	3998
+    61  0000                     _TXREG	set	4013
+    62  0000                     _SPBRGH	set	4016
+    63  0000                     _SPBRG	set	4015
+    64  0000                     _BAUDCONbits	set	4024
+    65  0000                     _INTCONbits	set	4082
+    66  0000                     _PIE1bits	set	3997
+    67  0000                     _TRISCbits	set	3988
+    68  0000                     _RCSTAbits	set	4011
+    69  0000                     _TXSTAbits	set	4012
+    70                           
+    71                           ; #config settings
+    72  0000                     
+    73                           	psect	cinit
+    74  007DB0                     __pcinit:
+    75                           	opt stack 0
+    76  007DB0                     start_initialization:
+    77                           	opt stack 0
+    78  007DB0                     __initialization:
+    79                           	opt stack 0
+    80  007DB0                     end_of_initialization:
+    81                           	opt stack 0
+    82  007DB0                     __end_of__initialization:
+    83                           	opt stack 0
+    84  007DB0  0E00               	movlw	low (__Lmediumconst shr (0+16))
+    85  007DB2  6EF8               	movwf	tblptru,c
+    86  007DB4  0100               	movlb	0
+    87  007DB6  EFFA  F03E         	goto	_main	;jump to C main() function
+    88                           tblptru	equ	0xFF8
+    89                           
+    90                           	psect	cstackCOMRAM
+    91  000001                     __pcstackCOMRAM:
+    92                           	opt stack 0
+    93  000001                     ?_pinRead:
+    94                           	opt stack 0
+    95  000001                     pinMode@port:
+    96                           	opt stack 0
+    97  000001                     pinWrite@port:
+    98                           	opt stack 0
+    99  000001                     pinRead@port:
+   100                           	opt stack 0
+   101                           
+   102                           ; 2 bytes @ 0x0
+   103  000001                     	ds	2
+   104  000003                     ??_pinRead:
+   105  000003                     pinMode@selectPin:
+   106                           	opt stack 0
+   107  000003                     pinWrite@selectPin:
+   108                           	opt stack 0
+   109                           
+   110                           ; 2 bytes @ 0x2
+   111  000003                     	ds	2
+   112  000005                     pinMode@mode:
+   113                           	opt stack 0
+   114  000005                     pinWrite@value:
+   115                           	opt stack 0
+   116                           
+   117                           ; 2 bytes @ 0x4
+   118  000005                     	ds	2
+   119  000007                     ??_pinMode:
+   120  000007                     ??_pinWrite:
+   121                           
+   122                           ; 1 bytes @ 0x6
+   123  000007                     	ds	2
+   124  000009                     ??_main:
+   125                           
+   126                           ; 1 bytes @ 0x8
+   127  000009                     	ds	2
+   128                           tblptru	equ	0xFF8
+   129                           
+   130 ;;
+   131 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   132 ;;
+   133 ;; *************** function _main *****************
+   134 ;; Defined at:
+   135 ;;		line 232 in file "main.c"
+   136 ;; Parameters:    Size  Location     Type
+   137 ;;		None
+   138 ;; Auto vars:     Size  Location     Type
+   139 ;;		None
+   140 ;; Return value:  Size  Location     Type
+   141 ;;                  1    wreg      void 
+   142 ;; Registers used:
+   143 ;;		wreg, status,2, status,0, cstack
+   144 ;; Tracked objects:
+   145 ;;		On entry : 0/0
+   146 ;;		On exit  : 0/0
+   147 ;;		Unchanged: 0/0
+   148 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   149 ;;      Params:         0       0       0       0       0       0       0       0       0
+   150 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   151 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   152 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   153 ;;Total ram usage:        2 bytes
+   154 ;; Hardware stack levels required when called:    1
+   155 ;; This function calls:
+   156 ;;		_initialSetings
+   157 ;;		_pinMode
+   158 ;;		_pinRead
+   159 ;;		_pinWrite
+   160 ;; This function is called by:
+   161 ;;		Startup code after reset
+   162 ;; This function uses a non-reentrant model
+   163 ;;
+   164                           
+   165                           	psect	text0
+   166  007DF4                     __ptext0:
+   167                           	opt stack 0
+   168  007DF4                     _main:
+   169                           	opt stack 30
+   170                           
+   171                           ;main.c: 233: initialSetings();
+   172                           
+   173                           ;incstack = 0
+   174  007DF4  ECDD  F03E         	call	_initialSetings	;wreg free
+   175                           
+   176                           ;main.c: 234: pinMode(0, 0xFF, 0);
+   177  007DF8  0E00               	movlw	0
+   178  007DFA  6E02               	movwf	pinMode@port+1,c
+   179  007DFC  0E00               	movlw	0
+   180  007DFE  6E01               	movwf	pinMode@port,c
+   181  007E00  0E00               	movlw	0
+   182  007E02  6E04               	movwf	pinMode@selectPin+1,c
+   183  007E04  6803               	setf	pinMode@selectPin,c
+   184  007E06  0E00               	movlw	0
+   185  007E08  6E06               	movwf	pinMode@mode+1,c
+   186  007E0A  0E00               	movlw	0
+   187  007E0C  6E05               	movwf	pinMode@mode,c
+   188  007E0E  EC4A  F03F         	call	_pinMode	;wreg free
+   189                           
+   190                           ;main.c: 235: pinWrite(0, 0x01, 1);
+   191  007E12  0E00               	movlw	0
+   192  007E14  6E02               	movwf	pinWrite@port+1,c
+   193  007E16  0E00               	movlw	0
+   194  007E18  6E01               	movwf	pinWrite@port,c
+   195  007E1A  0E00               	movlw	0
+   196  007E1C  6E04               	movwf	pinWrite@selectPin+1,c
+   197  007E1E  0E01               	movlw	1
+   198  007E20  6E03               	movwf	pinWrite@selectPin,c
+   199  007E22  0E00               	movlw	0
+   200  007E24  6E06               	movwf	pinWrite@value+1,c
+   201  007E26  0E01               	movlw	1
+   202  007E28  6E05               	movwf	pinWrite@value,c
+   203  007E2A  ECA5  F03F         	call	_pinWrite	;wreg free
+   204  007E2E                     l1024:
+   205                           
+   206                           ;main.c: 238: _delay((unsigned long)((500)*(24000000/4000.0)));
+   207  007E2E  0E10               	movlw	16
+   208  007E30  6E0A               	movwf	(??_main+1)& (0+255),c
+   209  007E32  0E39               	movlw	57
+   210  007E34  6E09               	movwf	??_main& (0+255),c
+   211  007E36  0E0E               	movlw	14
+   212  007E38                     u297:
+   213  007E38  2EE8               	decfsz	wreg,f,c
+   214  007E3A  D7FE               	bra	u297
+   215  007E3C  2E09               	decfsz	??_main& (0+255),f,c
+   216  007E3E  D7FC               	bra	u297
+   217  007E40  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   218  007E42  D7FA               	bra	u297
+   219                           
+   220                           ;main.c: 239: LATA = LATA << 1;
+   221  007E44  5089               	movf	3977,w,c	;volatile
+   222  007E46  2489               	addwf	3977,w,c	;volatile
+   223  007E48  6E89               	movwf	3977,c	;volatile
+   224                           
+   225                           ;main.c: 240: _delay((unsigned long)((500)*(24000000/4000.0)));
+   226  007E4A  0E10               	movlw	16
+   227  007E4C  6E0A               	movwf	(??_main+1)& (0+255),c
+   228  007E4E  0E39               	movlw	57
+   229  007E50  6E09               	movwf	??_main& (0+255),c
+   230  007E52  0E0E               	movlw	14
+   231  007E54                     u307:
+   232  007E54  2EE8               	decfsz	wreg,f,c
+   233  007E56  D7FE               	bra	u307
+   234  007E58  2E09               	decfsz	??_main& (0+255),f,c
+   235  007E5A  D7FC               	bra	u307
+   236  007E5C  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   237  007E5E  D7FA               	bra	u307
+   238                           
+   239                           ;main.c: 241: if(pinRead(0) == 0x08){
+   240  007E60  0E00               	movlw	0
+   241  007E62  6E02               	movwf	pinRead@port+1,c
+   242  007E64  0E00               	movlw	0
+   243  007E66  6E01               	movwf	pinRead@port,c
+   244  007E68  ECE8  F03E         	call	_pinRead	;wreg free
+   245  007E6C  0E08               	movlw	8
+   246  007E6E  1801               	xorwf	?_pinRead,w,c
+   247  007E70  1002               	iorwf	?_pinRead+1,w,c
+   248  007E72  A4D8               	btfss	status,2,c
+   249  007E74  D7DC               	goto	l1024
+   250                           
+   251                           ;main.c: 242: pinWrite(0, 0x01, 1);
+   252  007E76  0E00               	movlw	0
+   253  007E78  6E02               	movwf	pinWrite@port+1,c
+   254  007E7A  0E00               	movlw	0
+   255  007E7C  6E01               	movwf	pinWrite@port,c
+   256  007E7E  0E00               	movlw	0
+   257  007E80  6E04               	movwf	pinWrite@selectPin+1,c
+   258  007E82  0E01               	movlw	1
+   259  007E84  6E03               	movwf	pinWrite@selectPin,c
+   260  007E86  0E00               	movlw	0
+   261  007E88  6E06               	movwf	pinWrite@value+1,c
+   262  007E8A  0E01               	movlw	1
+   263  007E8C  6E05               	movwf	pinWrite@value,c
+   264  007E8E  ECA5  F03F         	call	_pinWrite	;wreg free
+   265  007E92  D7CD               	goto	l1024
+   266  007E94                     __end_of_main:
+   267                           	opt stack 0
+   268                           tblptru	equ	0xFF8
+   269                           wreg	equ	0xFE8
+   270                           status	equ	0xFD8
+   271                           
+   272 ;; *************** function _pinWrite *****************
+   273 ;; Defined at:
+   274 ;;		line 168 in file "main.c"
+   275 ;; Parameters:    Size  Location     Type
+   276 ;;  port            2    0[COMRAM] int 
+   277 ;;  selectPin       2    2[COMRAM] int 
+   278 ;;  value           2    4[COMRAM] int 
+   279 ;; Auto vars:     Size  Location     Type
+   280 ;;		None
+   281 ;; Return value:  Size  Location     Type
+   282 ;;                  1    wreg      void 
+   283 ;; Registers used:
+   284 ;;		wreg, status,2, status,0
+   285 ;; Tracked objects:
+   286 ;;		On entry : 0/0
+   287 ;;		On exit  : 0/0
+   288 ;;		Unchanged: 0/0
+   289 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   290 ;;      Params:         6       0       0       0       0       0       0       0       0
+   291 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   292 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   293 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   294 ;;Total ram usage:        8 bytes
+   295 ;; Hardware stack levels used:    1
+   296 ;; This function calls:
+   297 ;;		Nothing
+   298 ;; This function is called by:
+   299 ;;		_main
+   300 ;; This function uses a non-reentrant model
+   301 ;;
+   302                           
+   303                           	psect	text1
+   304  007F4A                     __ptext1:
+   305                           	opt stack 0
+   306  007F4A                     _pinWrite:
+   307                           	opt stack 30
+   308                           
+   309                           ;main.c: 169: switch(port){
+   310                           
+   311                           ;incstack = 0
+   312  007F4A  D041               	goto	l1000
+   313  007F4C                     l968:
+   314                           
+   315                           ;main.c: 171: if(value){
+   316  007F4C  5005               	movf	pinWrite@value,w,c
+   317  007F4E  1006               	iorwf	pinWrite@value+1,w,c
+   318  007F50  B4D8               	btfsc	status,2,c
+   319  007F52  D004               	goto	l972
+   320                           
+   321                           ;main.c: 172: LATA = LATA | selectPin;
+   322  007F54  5089               	movf	3977,w,c	;volatile
+   323  007F56  1003               	iorwf	pinWrite@selectPin,w,c
+   324  007F58  6E89               	movwf	3977,c	;volatile
+   325                           
+   326                           ;main.c: 173: }
+   327  007F5A  0012               	return	
+   328  007F5C                     l972:
+   329                           
+   330                           ;main.c: 174: else{
+   331                           ;main.c: 175: LATA = LATA & (~selectPin);
+   332  007F5C  5003               	movf	pinWrite@selectPin,w,c
+   333  007F5E  0AFF               	xorlw	255
+   334  007F60  1489               	andwf	3977,w,c	;volatile
+   335  007F62  6E89               	movwf	3977,c	;volatile
+   336                           
+   337                           ;main.c: 177: }
+   338                           ;main.c: 178: break;
+   339  007F64  0012               	return	
+   340  007F66                     l974:
+   341                           
+   342                           ;main.c: 181: if(value){
+   343  007F66  5005               	movf	pinWrite@value,w,c
+   344  007F68  1006               	iorwf	pinWrite@value+1,w,c
+   345  007F6A  B4D8               	btfsc	status,2,c
+   346  007F6C  D004               	goto	l978
+   347                           
+   348                           ;main.c: 182: LATB = LATB | selectPin;
+   349  007F6E  508A               	movf	3978,w,c	;volatile
+   350  007F70  1003               	iorwf	pinWrite@selectPin,w,c
+   351  007F72  6E8A               	movwf	3978,c	;volatile
+   352                           
+   353                           ;main.c: 183: }
+   354  007F74  0012               	return	
+   355  007F76                     l978:
+   356                           
+   357                           ;main.c: 184: else{
+   358                           ;main.c: 185: LATB = LATB & (~selectPin);
+   359  007F76  5003               	movf	pinWrite@selectPin,w,c
+   360  007F78  0AFF               	xorlw	255
+   361  007F7A  148A               	andwf	3978,w,c	;volatile
+   362  007F7C  6E8A               	movwf	3978,c	;volatile
+   363                           
+   364                           ;main.c: 186: }
+   365                           ;main.c: 187: break;
+   366  007F7E  0012               	return	
+   367  007F80                     l980:
+   368                           
+   369                           ;main.c: 190: if(value){
+   370  007F80  5005               	movf	pinWrite@value,w,c
+   371  007F82  1006               	iorwf	pinWrite@value+1,w,c
+   372  007F84  B4D8               	btfsc	status,2,c
+   373  007F86  D004               	goto	l984
+   374                           
+   375                           ;main.c: 191: LATC = LATC | selectPin;
+   376  007F88  508B               	movf	3979,w,c	;volatile
+   377  007F8A  1003               	iorwf	pinWrite@selectPin,w,c
+   378  007F8C  6E8B               	movwf	3979,c	;volatile
+   379                           
+   380                           ;main.c: 192: }
+   381  007F8E  0012               	return	
+   382  007F90                     l984:
+   383                           
+   384                           ;main.c: 193: else{
+   385                           ;main.c: 194: LATC = LATC & (~selectPin);
+   386  007F90  5003               	movf	pinWrite@selectPin,w,c
+   387  007F92  0AFF               	xorlw	255
+   388  007F94  148B               	andwf	3979,w,c	;volatile
+   389  007F96  6E8B               	movwf	3979,c	;volatile
+   390                           
+   391                           ;main.c: 195: }
+   392                           ;main.c: 196: break;
+   393  007F98  0012               	return	
+   394  007F9A                     l986:
+   395                           
+   396                           ;main.c: 199: if(value){
+   397  007F9A  5005               	movf	pinWrite@value,w,c
+   398  007F9C  1006               	iorwf	pinWrite@value+1,w,c
+   399  007F9E  B4D8               	btfsc	status,2,c
+   400  007FA0  D004               	goto	l990
+   401                           
+   402                           ;main.c: 200: LATD = LATD | selectPin;
+   403  007FA2  508C               	movf	3980,w,c	;volatile
+   404  007FA4  1003               	iorwf	pinWrite@selectPin,w,c
+   405  007FA6  6E8C               	movwf	3980,c	;volatile
+   406                           
+   407                           ;main.c: 201: }
+   408  007FA8  0012               	return	
+   409  007FAA                     l990:
+   410                           
+   411                           ;main.c: 202: else{
+   412                           ;main.c: 203: LATD = LATD & (~selectPin);
+   413  007FAA  5003               	movf	pinWrite@selectPin,w,c
+   414  007FAC  0AFF               	xorlw	255
+   415  007FAE  148C               	andwf	3980,w,c	;volatile
+   416  007FB0  6E8C               	movwf	3980,c	;volatile
+   417                           
+   418                           ;main.c: 204: }
+   419                           ;main.c: 205: break;
+   420  007FB2  0012               	return	
+   421  007FB4                     l992:
+   422                           
+   423                           ;main.c: 208: if(value){
+   424  007FB4  5005               	movf	pinWrite@value,w,c
+   425  007FB6  1006               	iorwf	pinWrite@value+1,w,c
+   426  007FB8  B4D8               	btfsc	status,2,c
+   427  007FBA  D004               	goto	l996
+   428                           
+   429                           ;main.c: 209: LATE = LATE | selectPin;
+   430  007FBC  508D               	movf	3981,w,c	;volatile
+   431  007FBE  1003               	iorwf	pinWrite@selectPin,w,c
+   432  007FC0  6E8D               	movwf	3981,c	;volatile
+   433                           
+   434                           ;main.c: 210: }
+   435  007FC2  0012               	return	
+   436  007FC4                     l996:
+   437                           
+   438                           ;main.c: 211: else{
+   439                           ;main.c: 212: LATE = LATE & (~selectPin);
+   440  007FC4  5003               	movf	pinWrite@selectPin,w,c
+   441  007FC6  0AFF               	xorlw	255
+   442  007FC8  148D               	andwf	3981,w,c	;volatile
+   443  007FCA  6E8D               	movwf	3981,c	;volatile
+   444                           
+   445                           ;main.c: 215: }
+   446                           
+   447                           ;main.c: 213: }
+   448                           ;main.c: 214: break;
+   449  007FCC  0012               	return	
+   450  007FCE                     l1000:
+   451  007FCE  C001  F007         	movff	pinWrite@port,??_pinWrite
+   452  007FD2  C002  F008         	movff	pinWrite@port+1,??_pinWrite+1
+   453                           
+   454                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   455                           ; Switch size 1, requested type "space"
+   456                           ; Number of cases is 1, Range of values is 0 to 0
+   457                           ; switch strategies available:
+   458                           ; Name         Instructions Cycles
+   459                           ; simple_byte            4     3 (average)
+   460                           ;	Chosen strategy is simple_byte
+   461  007FD6  5008               	movf	??_pinWrite+1,w,c
+   462  007FD8  0A00               	xorlw	0	; case 0
+   463  007FDA  A4D8               	btfss	status,2,c
+   464  007FDC  0012               	return	
+   465                           
+   466                           ; Switch size 1, requested type "space"
+   467                           ; Number of cases is 5, Range of values is 0 to 4
+   468                           ; switch strategies available:
+   469                           ; Name         Instructions Cycles
+   470                           ; simple_byte           16     9 (average)
+   471                           ;	Chosen strategy is simple_byte
+   472  007FDE  5007               	movf	??_pinWrite,w,c
+   473  007FE0  0A00               	xorlw	0	; case 0
+   474  007FE2  B4D8               	btfsc	status,2,c
+   475  007FE4  D7B3               	goto	l968
+   476  007FE6  0A01               	xorlw	1	; case 1
+   477  007FE8  B4D8               	btfsc	status,2,c
+   478  007FEA  D7BD               	goto	l974
+   479  007FEC  0A03               	xorlw	3	; case 2
+   480  007FEE  B4D8               	btfsc	status,2,c
+   481  007FF0  D7C7               	goto	l980
+   482  007FF2  0A01               	xorlw	1	; case 3
+   483  007FF4  B4D8               	btfsc	status,2,c
+   484  007FF6  D7D1               	goto	l986
+   485  007FF8  0A07               	xorlw	7	; case 4
+   486  007FFA  A4D8               	btfss	status,2,c
+   487  007FFC  0012               	return	
+   488  007FFE  D7DA               	goto	l992
+   489  008000                     __end_of_pinWrite:
+   490                           	opt stack 0
+   491                           tblptru	equ	0xFF8
+   492                           wreg	equ	0xFE8
+   493                           status	equ	0xFD8
+   494                           
+   495 ;; *************** function _pinRead *****************
+   496 ;; Defined at:
+   497 ;;		line 217 in file "main.c"
+   498 ;; Parameters:    Size  Location     Type
+   499 ;;  port            2    0[COMRAM] int 
+   500 ;; Auto vars:     Size  Location     Type
+   501 ;;		None
+   502 ;; Return value:  Size  Location     Type
+   503 ;;                  2    0[COMRAM] int 
+   504 ;; Registers used:
+   505 ;;		wreg, status,2, status,0
+   506 ;; Tracked objects:
+   507 ;;		On entry : 0/0
+   508 ;;		On exit  : 0/0
+   509 ;;		Unchanged: 0/0
+   510 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   511 ;;      Params:         2       0       0       0       0       0       0       0       0
+   512 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   513 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   514 ;;      Totals:         4       0       0       0       0       0       0       0       0
+   515 ;;Total ram usage:        4 bytes
+   516 ;; Hardware stack levels used:    1
+   517 ;; This function calls:
+   518 ;;		Nothing
+   519 ;; This function is called by:
+   520 ;;		_main
+   521 ;; This function uses a non-reentrant model
+   522 ;;
+   523                           
+   524                           	psect	text2
+   525  007DD0                     __ptext2:
+   526                           	opt stack 0
+   527  007DD0                     _pinRead:
+   528                           	opt stack 30
+   529                           
+   530                           ;main.c: 218: switch(port){
+   531                           
+   532                           ;incstack = 0
+   533  007DD0  D004               	goto	l1012
+   534  007DD2                     l125:
+   535                           
+   536                           ;main.c: 220: return LATA;
+   537  007DD2  CF89 F001          	movff	3977,?_pinRead	;volatile
+   538  007DD6  6A02               	clrf	?_pinRead+1,c
+   539                           
+   540                           ;main.c: 222: }
+   541                           
+   542                           ;main.c: 221: break;
+   543  007DD8  0012               	return	
+   544  007DDA                     l1012:
+   545  007DDA  C001  F003         	movff	pinRead@port,??_pinRead
+   546  007DDE  C002  F004         	movff	pinRead@port+1,??_pinRead+1
+   547                           
+   548                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   549                           ; Switch size 1, requested type "space"
+   550                           ; Number of cases is 1, Range of values is 0 to 0
+   551                           ; switch strategies available:
+   552                           ; Name         Instructions Cycles
+   553                           ; simple_byte            4     3 (average)
+   554                           ;	Chosen strategy is simple_byte
+   555  007DE2  5004               	movf	??_pinRead+1,w,c
+   556  007DE4  0A00               	xorlw	0	; case 0
+   557  007DE6  A4D8               	btfss	status,2,c
+   558  007DE8  0012               	return	
+   559                           
+   560                           ; Switch size 1, requested type "space"
+   561                           ; Number of cases is 1, Range of values is 0 to 0
+   562                           ; switch strategies available:
+   563                           ; Name         Instructions Cycles
+   564                           ; simple_byte            4     3 (average)
+   565                           ;	Chosen strategy is simple_byte
+   566  007DEA  5003               	movf	??_pinRead,w,c
+   567  007DEC  0A00               	xorlw	0	; case 0
+   568  007DEE  A4D8               	btfss	status,2,c
+   569  007DF0  0012               	return	
+   570  007DF2  D7EF               	goto	l125
+   571  007DF4                     __end_of_pinRead:
+   572                           	opt stack 0
+   573                           tblptru	equ	0xFF8
+   574                           wreg	equ	0xFE8
+   575                           status	equ	0xFD8
+   576                           
+   577 ;; *************** function _pinMode *****************
+   578 ;; Defined at:
+   579 ;;		line 119 in file "main.c"
+   580 ;; Parameters:    Size  Location     Type
+   581 ;;  port            2    0[COMRAM] int 
+   582 ;;  selectPin       2    2[COMRAM] int 
+   583 ;;  mode            2    4[COMRAM] int 
+   584 ;; Auto vars:     Size  Location     Type
+   585 ;;		None
+   586 ;; Return value:  Size  Location     Type
+   587 ;;                  1    wreg      void 
+   588 ;; Registers used:
+   589 ;;		wreg, status,2, status,0
+   590 ;; Tracked objects:
+   591 ;;		On entry : 0/0
+   592 ;;		On exit  : 0/0
+   593 ;;		Unchanged: 0/0
+   594 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   595 ;;      Params:         6       0       0       0       0       0       0       0       0
+   596 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   597 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   598 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   599 ;;Total ram usage:        8 bytes
+   600 ;; Hardware stack levels used:    1
+   601 ;; This function calls:
+   602 ;;		Nothing
+   603 ;; This function is called by:
+   604 ;;		_main
+   605 ;; This function uses a non-reentrant model
+   606 ;;
+   607                           
+   608                           	psect	text3
+   609  007E94                     __ptext3:
+   610                           	opt stack 0
+   611  007E94                     _pinMode:
+   612                           	opt stack 30
+   613                           
+   614                           ;main.c: 120: switch(port){
+   615                           
+   616                           ;incstack = 0
+   617  007E94  D041               	goto	l960
+   618  007E96                     l928:
+   619                           
+   620                           ;main.c: 122: if(mode){
+   621  007E96  5005               	movf	pinMode@mode,w,c
+   622  007E98  1006               	iorwf	pinMode@mode+1,w,c
+   623  007E9A  B4D8               	btfsc	status,2,c
+   624  007E9C  D004               	goto	l932
+   625                           
+   626                           ;main.c: 123: TRISA = TRISA | selectPin;
+   627  007E9E  5092               	movf	3986,w,c	;volatile
+   628  007EA0  1003               	iorwf	pinMode@selectPin,w,c
+   629  007EA2  6E92               	movwf	3986,c	;volatile
+   630                           
+   631                           ;main.c: 124: }
+   632  007EA4  0012               	return	
+   633  007EA6                     l932:
+   634                           
+   635                           ;main.c: 125: else{
+   636                           ;main.c: 126: TRISA = TRISA & (~selectPin);
+   637  007EA6  5003               	movf	pinMode@selectPin,w,c
+   638  007EA8  0AFF               	xorlw	255
+   639  007EAA  1492               	andwf	3986,w,c	;volatile
+   640  007EAC  6E92               	movwf	3986,c	;volatile
+   641                           
+   642                           ;main.c: 128: }
+   643                           ;main.c: 129: break;
+   644  007EAE  0012               	return	
+   645  007EB0                     l934:
+   646                           
+   647                           ;main.c: 132: if(mode){
+   648  007EB0  5005               	movf	pinMode@mode,w,c
+   649  007EB2  1006               	iorwf	pinMode@mode+1,w,c
+   650  007EB4  B4D8               	btfsc	status,2,c
+   651  007EB6  D004               	goto	l938
+   652                           
+   653                           ;main.c: 133: TRISB = TRISB | selectPin;
+   654  007EB8  5093               	movf	3987,w,c	;volatile
+   655  007EBA  1003               	iorwf	pinMode@selectPin,w,c
+   656  007EBC  6E93               	movwf	3987,c	;volatile
+   657                           
+   658                           ;main.c: 134: }
+   659  007EBE  0012               	return	
+   660  007EC0                     l938:
+   661                           
+   662                           ;main.c: 135: else{
+   663                           ;main.c: 136: TRISB = TRISB & (~selectPin);
+   664  007EC0  5003               	movf	pinMode@selectPin,w,c
+   665  007EC2  0AFF               	xorlw	255
+   666  007EC4  1493               	andwf	3987,w,c	;volatile
+   667  007EC6  6E93               	movwf	3987,c	;volatile
+   668                           
+   669                           ;main.c: 137: }
+   670                           ;main.c: 138: break;
+   671  007EC8  0012               	return	
+   672  007ECA                     l940:
+   673                           
+   674                           ;main.c: 141: if(mode){
+   675  007ECA  5005               	movf	pinMode@mode,w,c
+   676  007ECC  1006               	iorwf	pinMode@mode+1,w,c
+   677  007ECE  B4D8               	btfsc	status,2,c
+   678  007ED0  D004               	goto	l944
+   679                           
+   680                           ;main.c: 142: TRISC = TRISC | selectPin;
+   681  007ED2  5094               	movf	3988,w,c	;volatile
+   682  007ED4  1003               	iorwf	pinMode@selectPin,w,c
+   683  007ED6  6E94               	movwf	3988,c	;volatile
+   684                           
+   685                           ;main.c: 143: }
+   686  007ED8  0012               	return	
+   687  007EDA                     l944:
+   688                           
+   689                           ;main.c: 144: else{
+   690                           ;main.c: 145: TRISC = TRISC & (~selectPin);
+   691  007EDA  5003               	movf	pinMode@selectPin,w,c
+   692  007EDC  0AFF               	xorlw	255
+   693  007EDE  1494               	andwf	3988,w,c	;volatile
+   694  007EE0  6E94               	movwf	3988,c	;volatile
+   695                           
+   696                           ;main.c: 146: }
+   697                           ;main.c: 147: break;
+   698  007EE2  0012               	return	
+   699  007EE4                     l946:
+   700                           
+   701                           ;main.c: 150: if(mode){
+   702  007EE4  5005               	movf	pinMode@mode,w,c
+   703  007EE6  1006               	iorwf	pinMode@mode+1,w,c
+   704  007EE8  B4D8               	btfsc	status,2,c
+   705  007EEA  D004               	goto	l950
+   706                           
+   707                           ;main.c: 151: TRISD = TRISD | selectPin;
+   708  007EEC  5095               	movf	3989,w,c	;volatile
+   709  007EEE  1003               	iorwf	pinMode@selectPin,w,c
+   710  007EF0  6E95               	movwf	3989,c	;volatile
+   711                           
+   712                           ;main.c: 152: }
+   713  007EF2  0012               	return	
+   714  007EF4                     l950:
+   715                           
+   716                           ;main.c: 153: else{
+   717                           ;main.c: 154: TRISD = TRISD & (~selectPin);
+   718  007EF4  5003               	movf	pinMode@selectPin,w,c
+   719  007EF6  0AFF               	xorlw	255
+   720  007EF8  1495               	andwf	3989,w,c	;volatile
+   721  007EFA  6E95               	movwf	3989,c	;volatile
+   722                           
+   723                           ;main.c: 155: }
+   724                           ;main.c: 156: break;
+   725  007EFC  0012               	return	
+   726  007EFE                     l952:
+   727                           
+   728                           ;main.c: 159: if(mode){
+   729  007EFE  5005               	movf	pinMode@mode,w,c
+   730  007F00  1006               	iorwf	pinMode@mode+1,w,c
+   731  007F02  B4D8               	btfsc	status,2,c
+   732  007F04  D004               	goto	l956
+   733                           
+   734                           ;main.c: 160: TRISE = TRISE | selectPin;
+   735  007F06  5096               	movf	3990,w,c	;volatile
+   736  007F08  1003               	iorwf	pinMode@selectPin,w,c
+   737  007F0A  6E96               	movwf	3990,c	;volatile
+   738                           
+   739                           ;main.c: 161: }
+   740  007F0C  0012               	return	
+   741  007F0E                     l956:
+   742                           
+   743                           ;main.c: 162: else{
+   744                           ;main.c: 163: TRISE = TRISE & (~selectPin);
+   745  007F0E  5003               	movf	pinMode@selectPin,w,c
+   746  007F10  0AFF               	xorlw	255
+   747  007F12  1496               	andwf	3990,w,c	;volatile
+   748  007F14  6E96               	movwf	3990,c	;volatile
+   749                           
+   750                           ;main.c: 166: }
+   751                           
+   752                           ;main.c: 164: }
+   753                           ;main.c: 165: break;
+   754  007F16  0012               	return	
+   755  007F18                     l960:
+   756  007F18  C001  F007         	movff	pinMode@port,??_pinMode
+   757  007F1C  C002  F008         	movff	pinMode@port+1,??_pinMode+1
+   758                           
+   759                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   760                           ; Switch size 1, requested type "space"
+   761                           ; Number of cases is 1, Range of values is 0 to 0
+   762                           ; switch strategies available:
+   763                           ; Name         Instructions Cycles
+   764                           ; simple_byte            4     3 (average)
+   765                           ;	Chosen strategy is simple_byte
+   766  007F20  5008               	movf	??_pinMode+1,w,c
+   767  007F22  0A00               	xorlw	0	; case 0
+   768  007F24  A4D8               	btfss	status,2,c
+   769  007F26  0012               	return	
+   770                           
+   771                           ; Switch size 1, requested type "space"
+   772                           ; Number of cases is 5, Range of values is 0 to 4
+   773                           ; switch strategies available:
+   774                           ; Name         Instructions Cycles
+   775                           ; simple_byte           16     9 (average)
+   776                           ;	Chosen strategy is simple_byte
+   777  007F28  5007               	movf	??_pinMode,w,c
+   778  007F2A  0A00               	xorlw	0	; case 0
+   779  007F2C  B4D8               	btfsc	status,2,c
+   780  007F2E  D7B3               	goto	l928
+   781  007F30  0A01               	xorlw	1	; case 1
+   782  007F32  B4D8               	btfsc	status,2,c
+   783  007F34  D7BD               	goto	l934
+   784  007F36  0A03               	xorlw	3	; case 2
+   785  007F38  B4D8               	btfsc	status,2,c
+   786  007F3A  D7C7               	goto	l940
+   787  007F3C  0A01               	xorlw	1	; case 3
+   788  007F3E  B4D8               	btfsc	status,2,c
+   789  007F40  D7D1               	goto	l946
+   790  007F42  0A07               	xorlw	7	; case 4
+   791  007F44  A4D8               	btfss	status,2,c
+   792  007F46  0012               	return	
+   793  007F48  D7DA               	goto	l952
+   794  007F4A                     __end_of_pinMode:
+   795                           	opt stack 0
+   796                           tblptru	equ	0xFF8
+   797                           wreg	equ	0xFE8
+   798                           status	equ	0xFD8
+   799                           
+   800 ;; *************** function _initialSetings *****************
+   801 ;; Defined at:
+   802 ;;		line 109 in file "main.c"
+   803 ;; Parameters:    Size  Location     Type
+   804 ;;		None
+   805 ;; Auto vars:     Size  Location     Type
+   806 ;;		None
+   807 ;; Return value:  Size  Location     Type
+   808 ;;                  1    wreg      void 
+   809 ;; Registers used:
+   810 ;;		wreg, status,2
+   811 ;; Tracked objects:
+   812 ;;		On entry : 0/0
+   813 ;;		On exit  : 0/0
+   814 ;;		Unchanged: 0/0
+   815 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   816 ;;      Params:         0       0       0       0       0       0       0       0       0
+   817 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   818 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   819 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   820 ;;Total ram usage:        0 bytes
+   821 ;; Hardware stack levels used:    1
+   822 ;; This function calls:
+   823 ;;		Nothing
+   824 ;; This function is called by:
+   825 ;;		_main
+   826 ;; This function uses a non-reentrant model
+   827 ;;
+   828                           
+   829                           	psect	text4
+   830  007DBA                     __ptext4:
+   831                           	opt stack 0
+   832  007DBA                     _initialSetings:
+   833                           	opt stack 30
+   834                           
+   835                           ;main.c: 111: TRISA = 0;
+   836                           
+   837                           ;incstack = 0
+   838  007DBA  0E00               	movlw	0
+   839  007DBC  6E92               	movwf	3986,c	;volatile
+   840                           
+   841                           ;main.c: 112: TRISB = 0;
+   842  007DBE  0E00               	movlw	0
+   843  007DC0  6E93               	movwf	3987,c	;volatile
+   844                           
+   845                           ;main.c: 113: TRISC = 0;
+   846  007DC2  0E00               	movlw	0
+   847  007DC4  6E94               	movwf	3988,c	;volatile
+   848                           
+   849                           ;main.c: 114: TRISD = 0;
+   850  007DC6  0E00               	movlw	0
+   851  007DC8  6E95               	movwf	3989,c	;volatile
+   852                           
+   853                           ;main.c: 115: TRISE = 0;
+   854  007DCA  0E00               	movlw	0
+   855  007DCC  6E96               	movwf	3990,c	;volatile
+   856  007DCE  0012               	return		;funcret
+   857  007DD0                     __end_of_initialSetings:
+   858                           	opt stack 0
+   859  0000                     tblptru	equ	0xFF8
+   860                           wreg	equ	0xFE8
+   861                           status	equ	0xFD8
+   862                           tblptru	equ	0xFF8
+   863                           wreg	equ	0xFE8
+   864                           status	equ	0xFD8
+   865                           
+   866                           	psect	rparam
+   867  0000                     tblptru	equ	0xFF8
+   868                           wreg	equ	0xFE8
+   869                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     10      10
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_pinMode
+    _main->_pinWrite
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    1486
+                                              8 COMRAM     2     2      0
+                     _initialSetings
+                            _pinMode
+                            _pinRead
+                           _pinWrite
+ ---------------------------------------------------------------------------------
+ (1) _pinWrite                                             8     2      6     808
+                                              0 COMRAM     8     2      6
+ ---------------------------------------------------------------------------------
+ (1) _pinRead                                              4     2      2      98
+                                              0 COMRAM     4     2      2
+ ---------------------------------------------------------------------------------
+ (1) _pinMode                                              8     2      6     580
+                                              0 COMRAM     8     2      6
+ ---------------------------------------------------------------------------------
+ (1) _initialSetings                                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _initialSetings
+   _pinMode
+   _pinRead
+   _pinWrite
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      A       A       1       10.5%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+ABS                  0      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.42 build -159332390 
+Symbol Table                                                                                   Sat Jun 30 09:39:05 2018
+
+            __CFG_BOR$ON 000000              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
+           __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
+            __CFG_LVP$ON 000000         ??_initialSetings 0001                      l125 7DD2  
+                    l940 7ECA                      l932 7EA6                      l950 7EF4  
+                    l934 7EB0                      l952 7EFE                      l944 7EDA  
+                    l928 7E96                      l960 7F18                      l946 7EE4  
+                    l938 7EC0                      l956 7F0E                      l980 7F80  
+                    l972 7F5C                      l990 7FAA                      l974 7F66  
+                    l992 7FB4                      l984 7F90                      l968 7F4C  
+                    l986 7F9A                      l978 7F76                      l996 7FC4  
+           __CFG_CPB$OFF 000000                      u307 7E54             __CFG_CPD$OFF 000000  
+                    u297 7E38                      wreg 000FE8             __CFG_WDT$OFF 000000  
+                   l1000 7FCE                     l1012 7DDA                     l1024 7E2E  
+                   _LATA 000F89                     _LATB 000F8A                     _LATC 000F8B  
+                   _LATD 000F8C                     _LATE 000F8D                     _main 7DF4  
+                   start 0000            __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000000            __CFG_PLLDIV$5 000000           __CFG_CCP2MX$ON 000000  
+                  ?_main 0001                    _RCREG 000FAE                    _SPBRG 000FAF  
+          __CFG_USBDIV$1 000000                    _TRISA 000F92                    _TRISB 000F93  
+                  _TRISC 000F94                    _TRISD 000F95                    _TRISE 000F96  
+                  _TXREG 000FAD            __CFG_PWRT$OFF 000000            __CFG_WRT0$OFF 000000  
+          __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000  
+         __CFG_EBTR0$OFF 000000           __CFG_FCMEN$OFF 000000           __CFG_EBTR1$OFF 000000  
+         __CFG_EBTR2$OFF 000000           __CFG_EBTR3$OFF 000000            __CFG_WRTB$OFF 000000  
+          __CFG_WRTC$OFF 000000            __CFG_WRTD$OFF 000000           __CFG_EBTRB$OFF 000000  
+        __end_of_pinRead 7DF4          __end_of_pinMode 7F4A                    status 000FD8  
+         __CFG_ICPRT$OFF 000000           __CFG_PBADEN$ON 000000          __initialization 7DB0  
+           __end_of_main 7E94                   ??_main 0009            __activetblptr 000002  
+                 _SPBRGH 000FB0           __CFG_XINST$OFF 000000           __CFG_STVREN$ON 000000  
+       __end_of_pinWrite 8000        pinWrite@selectPin 0003                ??_pinRead 0003  
+              ??_pinMode 0007                   tblptru 000FF8               __accesstop 0060  
+__end_of__initialization 7DB0            ___rparam_used 000001              pinRead@port 0001  
+            pinMode@mode 0005              pinMode@port 0001           __pcstackCOMRAM 0001  
+          pinWrite@value 0005          __CFG_VREGEN$OFF 000000                ?_pinWrite 0001  
+                __Hparam 0000                  __Lparam 0000                  __pcinit 7DB0  
+                __ramtop 0800                  __ptext0 7DF4                  __ptext1 7F4A  
+                __ptext2 7DD0                  __ptext3 7E94                  __ptext4 7DBA  
+                _pinRead 7DD0                  _pinMode 7E94     end_of_initialization 7DB0  
+__size_of_initialSetings 0016            __Lmediumconst 0000               ??_pinWrite 0007  
+              _RCSTAbits 000FAB                _TRISCbits 000F94         pinMode@selectPin 0003  
+              _TXSTAbits 000FAC              _BAUDCONbits 000FB8      start_initialization 7DB0  
+       __CFG_LPT1OSC$OFF 000000           _initialSetings 7DBA             pinWrite@port 0001  
+      __size_of_pinWrite 00B6                 ?_pinRead 0001                 ?_pinMode 0001  
+ __end_of_initialSetings 7DD0                 _PIE1bits 000F9D                 _PIR1bits 000F9E  
+       __CFG_WDTPS$32768 000000          ?_initialSetings 0001                 __Hrparam 0000  
+               __Lrparam 0000         __size_of_pinRead 0024         __size_of_pinMode 00B6  
+          __size_of_main 00A0                 _pinWrite 7F4A    __CFG_CPUDIV$OSC3_PLL4 000000  
+             _INTCONbits 000FF2       __CFG_FOSC$HSPLL_HS 000000  

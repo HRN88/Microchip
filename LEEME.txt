@@ -1,0 +1,25 @@
+p1_salidas   	Como usar las salidas corrimiento de bits con leds
+p2_entradas  	Como usar las entradas con pushbutton
+p3_interrupt	Como usar la interrupcion del TMR0 y la llamada a una ISR
+p4_timer     	Como usar el TMR0 como temporizador, a 8bits y 16bits
+p5_semaforo	Se realiza un semaforo con interrupciones y el TMR0
+p6_intext		Como usar la interrupcion externa INT0 (PB0), para prender un led
+p7_timer0y1	Como usar el TMR0 y TMR1 como temporizador (Parpadear 2 leds) sin ISR
+p8_ti           	Como usar el TMR0 y TMR1 como temporizador (Parpadear 2 leds) con ISR sin prioridad y con prioridad
+p9_pwm		Como usar el modulo CCP1 y generar una señal PWM
+p10_pushpwm	Hacer variar el PWM (salida en RB3) con un pushbutton usando interrupcion INT0
+
+
+	
+
++++++++++++++++++++++
+Software utilizado
++++++++++++++++++++++
+IDE MPLABX
+Compilador XC8
+
+++++++++++++++++++++
+Recursos
+++++++++++++++++++++
+RRPicTimerCalculator
+Hoja de calculo para automatizar los calculos del CCP para PWM
